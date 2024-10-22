@@ -11,7 +11,7 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  base: process.env.NODE_ENV === "production" ? "/climqa/" : "/",
+  base: "/climqa/",
   build: {
     rollupOptions: {
       external: ["react", "react-router", "react-router-dom", "react-redux"],
