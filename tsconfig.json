@@ -8,6 +8,11 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]
-    }
-  }
+    },
+    "jsx": "react-jsx",
+    "types": ["@testing-library/jest-dom"],
+    "esModuleInterop": true
+  },
+  "exclude": ["**/*.test.*"],
+  "types": ["node", "jest", "@testing-library/jest-dom"]
 }
