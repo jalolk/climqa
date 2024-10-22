@@ -11,15 +11,4 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  base: "/climqa/",
-  build: {
-    rollupOptions: {
-      external: ["react", "react-router", "react-router-dom", "react-redux"],
-      output: {
-        globals: {
-          react: "React",
-        },
-      },
-    },
-  },
 });

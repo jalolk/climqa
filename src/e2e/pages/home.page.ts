@@ -26,7 +26,7 @@ export class HomePage {
   }
 
   async goto() {
-    await this.page.goto("http://localhost:5173/climqa/");
+    await this.page.goto("http://localhost:5173/");
   }
 
   async searchLocation(location: string) {
