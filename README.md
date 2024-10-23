@@ -1,50 +1,114 @@
-# React + TypeScript + Vite
+# ClimQA: Modern Frontend Testing Framework Template
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 🎯 Overview
+A comprehensive QA-focused template demonstrating industry best practices for frontend testing architecture. Uses a weather dashboard as a practical example to showcase various testing strategies and CI/CD implementation.
 
-Currently, two official plugins are available:
+## 🔍 Key QA Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Testing Architecture
+- **Unit Testing**: Jest + React Testing Library
+  - Component isolation testing
+  - Mocking strategies implementation
 
-## Expanding the ESLint configuration
+### End-to-End Testing
+- **Playwright Integration**
+  - Page Object Model (POM) implementation
+  - Cross-browser testing setup
+  - Mobile responsive testing
+  - Network request mocking
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### CI/CD Pipeline
+- **GitHub Actions Integration**
+  - Parallel test execution
+  - Build verification
+  - Test artifact preservation
+  - Coverage reporting
+  - Automated deployments
 
-- Configure the top-level `parserOptions` property like this:
+### QA Best Practices
+- Component isolation
+- Test data management
+- Error boundary testing
+- Accessibility testing
+- API mocking strategies
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## 🛠 Technical Stack
+- **Framework**: React + Vite + TypeScript
+- **Testing**: Jest, RTL, Playwright
+- **CI/CD**: GitHub Actions
+- **Deployment**: Github Pages
+- **Styling**: TailwindCSS
+- **State Management**: React Query
+
+## 📈 Test Coverage Requirements
+- Unit Tests: >80%
+- E2E Coverage: Critical user paths
+- Automatic PR checks
+- Coverage reporting
+
+## 🚀 Getting Started
+
+```bash
+# Install dependencies
+yarn install
+
+# Run unit tests
+yarn test
+
+# Run E2E tests
+yarn test:e2e
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## 🔄 CI/CD Workflow
+1. **PR Created**:
+   - Lint checks
+   - Unit tests with coverage
+   - Build verification
+   - E2E tests
+   - Preview deployment
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+2. **Main Branch**:
+   - Full test suite
+   - Production build
+   - Deployment
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+## 🎯 Use Cases
+- Frontend testing framework setup
+- CI/CD pipeline implementation
+- QA automation practices
+- Test strategy development
+- Developer workflow optimization
+
+## 🤝 Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change. Please make sure to update tests as appropriate.
+
+## 📄 License
+MIT
+
+---
+
+## Why ClimQA?
+
+This project serves as a reference implementation for QA engineers and developers looking to:
+- Set up a modern frontend testing architecture
+- Implement CI/CD with automated testing
+- Follow testing best practices
+- Establish code quality standards
+- Create maintainable test suites
+
+The weather dashboard serves as a practical example, demonstrating:
+- Component testing strategies
+- API integration testing
+- User interaction testing
+- Error handling testing
+- Performance monitoring
+- Accessibility compliance
+
+Perfect for:
+- QA Engineers
+- Frontend Developers
+- DevOps Engineers
+- Testing Teams
+- CI/CD Implementation
+
+Tags: `testing` `qa` `automation` `ci-cd` `react` `playwright` `jest` `rtl` `typescript` `github-actions` `vercel`
